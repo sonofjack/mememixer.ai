@@ -14,7 +14,9 @@ export default defineConfig({
     }),
     tanstackStart(),
     // https://tanstack.com/start/latest/docs/framework/react/guide/hosting
-    nitro(),
+    nitro({
+      preset: "vercel",
+    }),
     viteReact({
       // https://react.dev/learn/react-compiler
       babel: {

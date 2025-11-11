@@ -14,4 +14,9 @@ export const env = createEnv({
     GOOGLE_CLIENT_SECRET: z.string().optional(),
   },
   runtimeEnv: process.env,
+  onValidationError: (error) => {
+    console.error("❌ Invalid environment variables:", error);
+    throw new Error("Invalid environment variables. Check the console for details.");
+  },
+  emptyStringAsUndefined: true,
 });
