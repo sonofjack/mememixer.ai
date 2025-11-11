@@ -72,6 +72,7 @@ We use **pnpm** by default, but you can modify these scripts in [package.json](.
 
 - [`auth/middleware.ts`](./src/lib/auth/middleware.ts) - Sample middleware for forcing authentication on server functions. (see [#5](https://github.com/dotnize/react-tanstarter/issues/5#issuecomment-2615905686) and [#17](https://github.com/dotnize/react-tanstarter/issues/17#issuecomment-2853482062))
 - [`theme-toggle.tsx`](./src/components/theme-toggle.tsx), [`theme-provider.tsx`](./src/components/theme-provider.tsx) - A theme toggle and provider for toggling between light and dark mode. ([#7](https://github.com/dotnize/react-tanstarter/issues/7#issuecomment-3141530412))
+- [shadcn/ui coloring guide](./docs/shadcn-coloring.md) - Recommendations for nested container backgrounds and when to use `bg-muted`, `bg-secondary`, `bg-accent`, or `bg-background`.
 
 ## License
 

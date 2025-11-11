@@ -66,11 +66,19 @@ function HomePage() {
             <Star color="yellow" size={32} strokeWidth={3} style={{ display: "block" }} />
             <LinkOut />
           </div>
-          {Array.from({ length: 100 }, (_, i) => (
-            <div key={i}>
-              <p>hello</p>
-            </div>
-          ))}
+          <div className="flex flex-col gap-2">
+            {Array.from({ length: 100 }, (_, i) => (
+              <div
+                key={i}
+                className="bg-card text-card-foreground flex flex-col gap-6 rounded-xl border p-4 py-6 shadow-sm"
+              >
+                <p>hello</p>
+                <div className="bg-muted text-muted-foreground rounded-xl border p-4">
+                  <p>mute</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </Container>
       </div>
       <div className="fixed right-0 bottom-0 left-0 flex h-[100px] w-full flex-row">
