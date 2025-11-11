@@ -7,9 +7,9 @@ import {
   Scripts,
 } from "@tanstack/react-router";
 
-import { TanStackDevtools } from "@tanstack/react-devtools";
-import { ReactQueryDevtoolsPanel } from "@tanstack/react-query-devtools";
-import { TanStackRouterDevtoolsPanel } from "@tanstack/react-router-devtools";
+// import { TanStackDevtools } from "@tanstack/react-devtools";
+// import { ReactQueryDevtoolsPanel } from "@tanstack/react-query-devtools";
+// import { TanStackRouterDevtoolsPanel } from "@tanstack/react-router-devtools";
 
 import { authQueryOptions, type AuthQueryResult } from "~/lib/auth/queries";
 import appCss from "~/styles.css?url";
@@ -73,7 +73,8 @@ function RootDocument({ children }: { readonly children: React.ReactNode }) {
           <Toaster richColors />
         </ThemeProvider>
 
-        <TanStackDevtools
+        {/* <TanStackDevtools
+
           plugins={[
             {
               name: "TanStack Query",
@@ -84,7 +85,7 @@ function RootDocument({ children }: { readonly children: React.ReactNode }) {
               render: <TanStackRouterDevtoolsPanel />,
             },
           ]}
-        />
+        /> */}
 
         <Scripts />
       </body>
