@@ -1,8 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ArrowRight, LinkOut, Star } from "akar-icons";
+import { LinkOut, Star } from "akar-icons";
+import { ArrowRight } from "lucide-react";
 // import { tv } from "tailwind-variants";
 import { Container } from "~/components/container";
 import { LogoMemeMixerBase } from "~/components/logo-mememixer";
+import { ThemeToggle } from "~/components/theme-toggle";
 import { Button } from "~/components/ui/button";
 import { Input } from "~/components/ui/input";
 
@@ -58,7 +60,9 @@ function HomePage() {
             <Input placeholder="Search" type="text" className="w-full" />
           </div>
           <div>
-            <ArrowRight />
+            <div>
+              <ArrowRight />
+            </div>
             <Star color="yellow" size={32} strokeWidth={3} style={{ display: "block" }} />
             <LinkOut />
           </div>
@@ -74,6 +78,8 @@ function HomePage() {
           <div className="w-full border border-green-200">
             <Input placeholder="Ask MemeMixer" type="text" className="w-full" />
           </div>
+
+          <ThemeToggle />
         </Container>
       </div>
     </div>
