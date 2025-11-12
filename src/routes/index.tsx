@@ -45,7 +45,7 @@ function HomePage() {
 
   return (
     <div className="relative flex flex-col">
-      <div className="flex w-full flex-row">
+      <div className="border-sidebar-border flex w-full flex-row border border-b">
         <Container className="flex items-center py-2">
           <div className="relative">
             <LogoMemeMixer className="relative h-auto max-w-25 text-[#cfcfd4]" />
