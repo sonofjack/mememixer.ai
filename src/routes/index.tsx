@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { LinkOut, Star } from "akar-icons";
+import { LinkOut, Person, SettingsHorizontal, Star } from "akar-icons";
 import { ArrowRight } from "lucide-react";
 // import { tv } from "tailwind-variants";
 import { Container } from "~/components/container";
@@ -49,22 +49,33 @@ function HomePage() {
         <Container className="flex py-1">
           <LogoMemeMixerBase className="h-auto max-w-24" />
           <div className="flex flex-1 justify-end gap-1">
-            <Button>Filter</Button>
-            <Button>Profile</Button>
+            <Button variant="outline" size="icon">
+              <SettingsHorizontal className="absolute h-[1.2rem] w-[1.2rem] scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0" />
+              <span className="sr-only">Toggle theme</span>
+            </Button>
+            <Button variant="outline" size="icon">
+              <Person className="absolute h-[1.2rem] w-[1.2rem] scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0" />
+              <span className="sr-only">Toggle theme</span>
+            </Button>
           </div>
         </Container>
       </div>
       <div className="relative flex max-h-[calc(100vh-150px)] w-full flex-1 flex-col overflow-scroll pt-2">
         <Container>
-          <div className="sticky top-0 w-full border border-green-200">
+          <div className="border- sticky top-0 w-full border-green-200">
             <Input placeholder="Search" type="text" className="w-full" />
           </div>
           <div>
-            <div>
+            <div className="hidden">
               <ArrowRight />
+              <Star
+                color="yellow"
+                size={32}
+                strokeWidth={3}
+                style={{ display: "block" }}
+              />
+              <LinkOut />
             </div>
-            <Star color="yellow" size={32} strokeWidth={3} style={{ display: "block" }} />
-            <LinkOut />
           </div>
           <div className="flex flex-col gap-2">
             {Array.from({ length: 100 }, (_, i) => (
@@ -83,11 +94,13 @@ function HomePage() {
       </div>
       <div className="fixed right-0 bottom-0 left-0 flex h-[100px] w-full flex-row">
         <Container>
-          <div className="w-full border border-green-200">
+          <div className="border- w-full border-green-200">
             <Input placeholder="Ask MemeMixer" type="text" className="w-full" />
           </div>
 
-          <ThemeToggle />
+          <div className="fixed right-0 bottom-0">
+            <ThemeToggle />
+          </div>
         </Container>
       </div>
     </div>
