@@ -1,0 +1,21 @@
+import {
+  DROPDOWN_MENU_CHECKBOX_ITEM_CLASSES,
+  DROPDOWN_MENU_CONTENT_CLASSES,
+  DROPDOWN_MENU_ITEM_CLASSES,
+  DROPDOWN_MENU_LABEL_CLASSES,
+  DROPDOWN_MENU_RADIO_ITEM_CLASSES,
+  DROPDOWN_MENU_SEPARATOR_CLASSES,
+  DROPDOWN_MENU_SHORTCUT_CLASSES,
+  DROPDOWN_MENU_SUB_CONTENT_CLASSES,
+  DROPDOWN_MENU_SUB_TRIGGER_CLASSES,
+} from "./constants";
+
+export const dropdownMenuContentClasses = DROPDOWN_MENU_CONTENT_CLASSES;
+export const dropdownMenuItemClasses = DROPDOWN_MENU_ITEM_CLASSES;
+export const dropdownMenuCheckboxItemClasses = DROPDOWN_MENU_CHECKBOX_ITEM_CLASSES;
+export const dropdownMenuRadioItemClasses = DROPDOWN_MENU_RADIO_ITEM_CLASSES;
+export const dropdownMenuLabelClasses = DROPDOWN_MENU_LABEL_CLASSES;
+export const dropdownMenuSeparatorClasses = DROPDOWN_MENU_SEPARATOR_CLASSES;
+export const dropdownMenuShortcutClasses = DROPDOWN_MENU_SHORTCUT_CLASSES;
+export const dropdownMenuSubTriggerClasses = DROPDOWN_MENU_SUB_TRIGGER_CLASSES;
+export const dropdownMenuSubContentClasses = DROPDOWN_MENU_SUB_CONTENT_CLASSES;

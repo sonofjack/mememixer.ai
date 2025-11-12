@@ -1,0 +1,11 @@
+import {
+  INPUT_BASE_CLASSES,
+  INPUT_FOCUS_CLASSES,
+  INPUT_INVALID_CLASSES,
+} from "./constants";
+
+export const inputClasses = [
+  INPUT_BASE_CLASSES,
+  INPUT_FOCUS_CLASSES,
+  INPUT_INVALID_CLASSES,
+];

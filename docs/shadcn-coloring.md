@@ -17,4 +17,3 @@ Nested content inside that section → `bg-background` or back to `bg-card` depe
 ```
 
 Use these tokens consistently to maintain visual rhythm while preserving accessibility in both light and dark themes.
-
