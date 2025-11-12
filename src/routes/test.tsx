@@ -2,7 +2,7 @@ import { useSuspenseQuery } from "@tanstack/react-query";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Suspense } from "react";
 import { tv } from "tailwind-variants";
-import { LogoMemeMixerBase } from "~/components/logo-mememixer";
+import { LogoMemeMixer } from "~/components/logo-mememixer";
 import { SignOutButton } from "~/components/sign-out-button";
 import { ThemeToggle } from "~/components/theme-toggle";
 import { Button } from "~/components/ui/button";
@@ -46,7 +46,7 @@ function HomePage() {
   return (
     <div className={styles.container()}>
       <div className={styles.headerSection()}>
-        <LogoMemeMixerBase className={styles.logo()} />
+        <LogoMemeMixer className={styles.logo()} />
         <h1 className={styles.title()}>MemeMixer.ai homepage</h1>
         <div className={styles.pageInfo()}>
           This is an unprotected page:

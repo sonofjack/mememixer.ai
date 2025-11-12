@@ -3,7 +3,7 @@ import { LinkOut, Person, SettingsHorizontal, Star } from "akar-icons";
 import { ArrowRight } from "lucide-react";
 // import { tv } from "tailwind-variants";
 import { Container } from "~/components/container";
-import { LogoMemeMixerBase } from "~/components/logo-mememixer";
+import { LogoMemeMixer } from "~/components/logo-mememixer";
 import { ThemeToggle } from "~/components/theme-toggle";
 import { Button } from "~/components/ui/button";
 import { Input } from "~/components/ui/input";
@@ -46,8 +46,11 @@ function HomePage() {
   return (
     <div className="relative flex flex-col">
       <div className="flex w-full flex-row">
-        <Container className="flex items-center py-1">
-          <LogoMemeMixerBase className="h-auto max-w-25" />
+        <Container className="flex items-center py-2">
+          <div className="relative">
+            <LogoMemeMixer className="relative h-auto max-w-25 text-[#cfcfd4]" />
+            <div className="intense-glow absolute top-[4px] left-[4px] size-[24px] rounded-full" />
+          </div>
           <div className="flex flex-1 items-center justify-end gap-1">
             <Button variant="outline" size="icon">
               <SettingsHorizontal className="absolute h-[1.2rem] w-[1.2rem] scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0" />
@@ -84,6 +87,11 @@ function HomePage() {
                 className="bg-card text-card-foreground flex flex-col gap-6 rounded-xl border p-4 py-6 shadow-sm"
               >
                 <p>hello</p>
+                <div className="col flex w-full flex-col gap-1">
+                  <Button variant="default">default</Button>
+                  <Button variant="secondary">secondary</Button>
+                  <Button variant="outline">outline</Button>
+                </div>
                 <div className="bg-muted text-muted-foreground rounded-xl border p-4">
                   <p>mute</p>
                 </div>

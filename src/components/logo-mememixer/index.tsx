@@ -1,1 +1,1 @@
-export { LogoMemeMixerBase } from "./logo-mememixer-base";
+export { LogoMemeMixerBase as LogoMemeMixer } from "./logo-mememixer-base";
