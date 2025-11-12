@@ -1,5 +1,4 @@
 import { Slot } from "@radix-ui/react-slot";
-import { cn } from "~/lib/utils";
 import type { ButtonProps } from "./types";
 import { buttonVariants } from "./variants";
 
@@ -11,12 +10,7 @@ export function Button({
   ...props
 }: ButtonProps) {
   const Comp = asChild ? Slot : "button";
+  const styles = buttonVariants({ variant, size });
 
-  return (
-    <Comp
-      data-slot="button"
-      className={cn(buttonVariants({ variant, size, className }))}
-      {...props}
-    />
-  );
+  return <Comp data-slot="button" className={styles.root({ className })} {...props} />;
 }
