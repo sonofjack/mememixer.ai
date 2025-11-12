@@ -46,9 +46,9 @@ function HomePage() {
   return (
     <div className="relative flex flex-col">
       <div className="flex w-full flex-row">
-        <Container className="flex py-1">
-          <LogoMemeMixerBase className="h-auto max-w-24" />
-          <div className="flex flex-1 justify-end gap-1">
+        <Container className="flex items-center py-1">
+          <LogoMemeMixerBase className="h-auto max-w-25" />
+          <div className="flex flex-1 items-center justify-end gap-1">
             <Button variant="outline" size="icon">
               <SettingsHorizontal className="absolute h-[1.2rem] w-[1.2rem] scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0" />
               <span className="sr-only">Toggle theme</span>
