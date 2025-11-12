@@ -35,5 +35,5 @@
   "[json][jsonc][typescript][typescriptreact][javascript][javascriptreact][html][css]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "cSpell.words": ["akar", "mememixer"]
+  "cSpell.words": ["akar", "Grenette", "mememixer"]
 }
