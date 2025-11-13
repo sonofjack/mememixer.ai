@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { LinkOut, Person, Search, SettingsHorizontal, Star } from "akar-icons";
-import { ArrowRight } from "lucide-react";
+import { LinkOut, Person, SettingsHorizontal, Star } from "akar-icons";
+import { ArrowRight, Search } from "lucide-react";
 // import { tv } from "tailwind-variants";
 import { Container } from "~/components/container";
 import { LogoMemeMixerGlow } from "~/components/logo-mememixer";
@@ -96,6 +96,64 @@ function HomePage() {
               <Button variant="default">default</Button>
               <Button variant="secondary">secondary</Button>
               <Button variant="outline">outline</Button>
+            </div>
+            <div>
+              {/* Default/Primary Buttons */}
+              <div className="space-y-4">
+                <h2 className="text-xl font-semibold text-cyan-400">Default (Primary)</h2>
+                <div className="flex flex-wrap gap-4">
+                  <button className="rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 px-6 py-3 font-medium text-white shadow-lg shadow-cyan-500/50 transition-all hover:from-cyan-400 hover:to-blue-500 hover:shadow-cyan-400/60">
+                    Create Meme
+                  </button>
+                  <button className="rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 px-6 py-3 font-medium text-white shadow-lg shadow-cyan-500/50 transition-all hover:from-cyan-400 hover:to-blue-500 hover:shadow-cyan-400/60">
+                    Generate
+                  </button>
+                  <button
+                    className="rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 px-6 py-3 font-medium text-white shadow-lg shadow-cyan-500/50 transition-all hover:from-cyan-400 hover:to-blue-500 hover:shadow-cyan-400/60 disabled:cursor-not-allowed disabled:opacity-50"
+                    disabled
+                  >
+                    Disabled
+                  </button>
+                </div>
+              </div>
+
+              {/* Secondary Buttons */}
+              <div className="space-y-4">
+                <h2 className="text-xl font-semibold text-cyan-400">Secondary</h2>
+                <div className="flex flex-wrap gap-4">
+                  <button className="rounded-lg border border-slate-600/50 bg-slate-700/80 px-6 py-3 font-medium text-white transition-all hover:border-slate-500/50 hover:bg-slate-600/80">
+                    Save Draft
+                  </button>
+                  <button className="rounded-lg border border-slate-600/50 bg-slate-700/80 px-6 py-3 font-medium text-white transition-all hover:border-slate-500/50 hover:bg-slate-600/80">
+                    Cancel
+                  </button>
+                  <button
+                    className="rounded-lg border border-slate-600/50 bg-slate-700/80 px-6 py-3 font-medium text-white transition-all hover:border-slate-500/50 hover:bg-slate-600/80 disabled:cursor-not-allowed disabled:opacity-50"
+                    disabled
+                  >
+                    Disabled
+                  </button>
+                </div>
+              </div>
+
+              {/* Outline Buttons */}
+              <div className="space-y-4">
+                <h2 className="text-xl font-semibold text-cyan-400">Outline</h2>
+                <div className="flex flex-wrap gap-4">
+                  <button className="rounded-lg border-2 border-cyan-500 bg-transparent px-6 py-3 font-medium text-cyan-400 transition-all hover:border-cyan-400 hover:bg-cyan-500/10">
+                    Browse Templates
+                  </button>
+                  <button className="rounded-lg border-2 border-cyan-500 bg-transparent px-6 py-3 font-medium text-cyan-400 transition-all hover:border-cyan-400 hover:bg-cyan-500/10">
+                    Learn More
+                  </button>
+                  <button
+                    className="rounded-lg border-2 border-cyan-500 bg-transparent px-6 py-3 font-medium text-cyan-400 transition-all hover:border-cyan-400 hover:bg-cyan-500/10 disabled:cursor-not-allowed disabled:opacity-50"
+                    disabled
+                  >
+                    Disabled
+                  </button>
+                </div>
+              </div>
             </div>
 
             {Array.from({ length: 100 }, (_, i) => (
