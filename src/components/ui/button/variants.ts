@@ -16,9 +16,9 @@ export const buttonVariants = tv({
     variant: {
       [BUTTON_VARIANTS.DEFAULT]: {
         root: [
-          "relative overflow-hidden rounded-xl border-0",
+          "relative overflow-hidden border-0",
           "bg-gradient-to-b from-cyan-500 to-blue-600",
-          "text-white font-semibold",
+          "text-black font-semibold",
           "shadow-lg shadow-cyan-500/25",
           "before:absolute before:inset-0 before:bg-gradient-to-b before:from-white/30 before:via-white/15 before:to-transparent before:pointer-events-none",
           "hover:from-cyan-400 hover:to-blue-500 hover:shadow-xl hover:shadow-cyan-500/30 hover:before:from-white/40",
@@ -55,13 +55,13 @@ export const buttonVariants = tv({
     },
     size: {
       [BUTTON_SIZES.DEFAULT]: {
-        root: "h-9 px-4 py-2 has-[>svg]:px-3",
+        root: "h-9 px-4 py-2 has-[>svg]:px-3 rounded-lg",
       },
       [BUTTON_SIZES.SM]: {
-        root: "h-8 rounded-md gap-1.5 px-3 has-[>svg]:px-2.5",
+        root: "h-8 rounded-md gap-1.5 px-3 has-[>svg]:px-2.5 rounded-xl",
       },
       [BUTTON_SIZES.LG]: {
-        root: "h-10 rounded-md px-6 has-[>svg]:px-4",
+        root: "h-10 rounded-md px-6 has-[>svg]:px-4 rounded-xl",
       },
       [BUTTON_SIZES.ICON]: {
         root: "size-9",
