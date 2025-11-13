@@ -68,8 +68,16 @@ function HomePage() {
         <Container>
           <div className="border- sticky top-0 w-full border-green-200">
             <div className="relative">
-              <Input placeholder="Search" type="text" className="w-full pl-10" />
-              <Search className="absolute top-0 left-0 mt-[10px] ml-[10px] size-4" />
+              <Input
+                placeholder="Search"
+                type="text"
+                className="h-10 w-full pl-10"
+                style={{
+                  backgroundColor: "#111118",
+                  border: "1px solid #25242e",
+                }}
+              />
+              <Search className="absolute top-0 left-0 mt-[14px] ml-[10px] size-4" />
             </div>
           </div>
           <div>
