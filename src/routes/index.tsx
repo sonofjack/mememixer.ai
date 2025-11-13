@@ -45,7 +45,7 @@ function HomePage() {
 
   return (
     <div className="relative flex flex-col">
-      <div className="border-sidebar-border flex w-full flex-row border-b">
+      <div className="bg-sidebar border-sidebar-border flex w-full flex-row border-b">
         <Container className="flex items-center py-2">
           <div className="relative">
             <a href="#" className="block transition-opacity hover:opacity-90">
