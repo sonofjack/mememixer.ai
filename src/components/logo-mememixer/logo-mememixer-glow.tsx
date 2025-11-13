@@ -19,9 +19,9 @@ export const LogoMemeMixerGlow: FC = () => (
     <div className="relative">
       <LogoMemeMixerBase
         dotFill="#6aaebf"
-        className="relative h-auto max-w-25 text-[#cfcfd4]"
+        className="relative h-auto max-w-28 text-[#cfcfd4]"
       />
-      <div className="logo-mememixer-glow__intense-glow absolute top-[4px] left-[4px] size-[24px] rounded-full" />
+      <div className="logo-mememixer-glow__intense-glow pointer-events-none absolute top-[5px] left-[5px] size-[25px] rounded-full" />
     </div>
   </>
 );

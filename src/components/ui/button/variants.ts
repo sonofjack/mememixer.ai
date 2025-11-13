@@ -30,9 +30,12 @@ export const buttonVariants = tv({
       },
       [BUTTON_VARIANTS.OUTLINE]: {
         root: [
-          "border bg-background shadow-xs",
-          "hover:bg-accent hover:text-accent-foreground",
-          "dark:bg-input/30 dark:border-input dark:hover:bg-input/50",
+          // "border bg-background",
+          // "border-input bg-[#111118]",
+          "border-input bg-background shadow-xs",
+          // "hover:bg-accent hover:text-accent-foreground",
+          // "dark:bg-input/30 dark:border-input dark:hover:bg-input/50",
+          // "dark:bg-input/30 dark:border-input dark:hover:bg-input/50",
         ],
       },
       [BUTTON_VARIANTS.GHOST]: {

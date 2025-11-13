@@ -71,13 +71,12 @@ function HomePage() {
               <Input
                 placeholder="Search"
                 type="text"
-                className="h-10 w-full pl-10"
+                className="h-12 w-full rounded-full pl-10"
                 style={{
                   backgroundColor: "#111118",
-                  border: "1px solid #25242e",
                 }}
               />
-              <Search className="absolute top-0 left-0 mt-[14px] ml-[10px] size-4" />
+              <Search className="absolute top-0 left-0 mt-[17px] ml-[15px] size-4" />
             </div>
           </div>
           <div>
@@ -93,7 +92,7 @@ function HomePage() {
             </div>
           </div>
           <div className="flex flex-col gap-2">
-            <div className="col mt-20 flex w-full flex-col gap-1">
+            <div className="col my-10 flex w-full flex-row gap-3">
               <Button variant="default">default</Button>
               <Button variant="secondary">secondary</Button>
               <Button variant="outline">outline</Button>
