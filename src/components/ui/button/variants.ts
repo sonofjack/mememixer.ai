@@ -27,7 +27,10 @@ export const buttonVariants = tv({
         ],
       },
       [BUTTON_VARIANTS.SECONDARY]: {
-        root: ["bg-secondary text-secondary-foreground hover:bg-secondary/80"],
+        root: [
+          // "bg-secondary text-secondary-foreground hover:bg-secondary/80",
+          "bg-[#353547] text-secondary-foreground border-[#4a4a61]",
+        ],
       },
       [BUTTON_VARIANTS.DESTRUCTIVE]: {
         root: [
@@ -64,13 +67,13 @@ export const buttonVariants = tv({
         root: "h-10 rounded-md px-6 has-[>svg]:px-4 rounded-xl",
       },
       [BUTTON_SIZES.ICON]: {
-        root: "size-9",
+        root: "size-9 rounded-lg",
       },
       [BUTTON_SIZES.ICON_SM]: {
-        root: "size-8",
+        root: "size-8 rounded-lg",
       },
       [BUTTON_SIZES.ICON_LG]: {
-        root: "size-10",
+        root: "size-10 rounded-lg",
       },
     },
   },
