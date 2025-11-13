@@ -3,7 +3,7 @@ import { LinkOut, Person, SettingsHorizontal, Star } from "akar-icons";
 import { ArrowRight } from "lucide-react";
 // import { tv } from "tailwind-variants";
 import { Container } from "~/components/container";
-import { LogoMemeMixer } from "~/components/logo-mememixer";
+import { LogoMemeMixerGlow } from "~/components/logo-mememixer";
 import { ThemeToggle } from "~/components/theme-toggle";
 import { Button } from "~/components/ui/button";
 import { Input } from "~/components/ui/input";
@@ -45,11 +45,12 @@ function HomePage() {
 
   return (
     <div className="relative flex flex-col">
-      <div className="border-sidebar-border flex w-full flex-row border border-b">
+      <div className="border-sidebar-border flex w-full flex-row border-b">
         <Container className="flex items-center py-2">
           <div className="relative">
-            <LogoMemeMixer className="relative h-auto max-w-25 text-[#cfcfd4]" />
-            <div className="intense-glow absolute top-[4px] left-[4px] size-[24px] rounded-full" />
+            <a href="#" className="block transition-opacity hover:opacity-90">
+              <LogoMemeMixerGlow />
+            </a>
           </div>
           <div className="flex flex-1 items-center justify-end gap-1">
             <Button variant="outline" size="icon">

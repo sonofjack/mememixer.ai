@@ -152,8 +152,10 @@
 }
 
 .dark {
-  --background: oklch(0.2166 0.0136 285.21);
+  --background: oklch(0.2084 0.0158 284.95);
+  /* --background: oklch(0.2166 0.0136 285.21); */
   /* --background: oklch(0.246 0.0152 279.6); */
+
   --foreground: oklch(0.85 0.005 0);
   --card: oklch(0.2444 0.017 290.17);
   --card-foreground: oklch(0.3939 0.0036 264.52);
@@ -182,7 +184,7 @@
   --sidebar-primary-foreground: oklch(0.98 0 0);
   --sidebar-accent: oklch(0.16 0.008 0);
   --sidebar-accent-foreground: oklch(0.85 0.005 0);
-  --sidebar-border: oklch(0.2 0.01 0);
+  --sidebar-border: oklch(0.1615 0.0105 285.17);
   --sidebar-ring: oklch(0.45 0.01 0);
 }
 
@@ -197,12 +199,4 @@
   [role="button"]:not(:disabled) {
     cursor: pointer;
   }
-}
-
-.intense-glow {
-  box-shadow:
-    0 0 10px rgba(255, 215, 0, 0.8),
-    0 0 20px rgba(255, 215, 0, 0.6),
-    0 0 30px rgba(255, 215, 0, 0.4),
-    0 0 40px rgba(255, 215, 0, 0.2);
 }
