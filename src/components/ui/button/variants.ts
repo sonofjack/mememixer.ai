@@ -10,13 +10,21 @@ export const buttonVariants = tv({
       "focus-visible:outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px]",
       "disabled:pointer-events-none disabled:opacity-50",
       "aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive",
-      "rounded-md",
     ],
   },
   variants: {
     variant: {
       [BUTTON_VARIANTS.DEFAULT]: {
-        root: ["bg-primary text-primary-foreground hover:bg-primary/90"],
+        root: [
+          "relative overflow-hidden rounded-xl border-0",
+          "bg-gradient-to-b from-cyan-500 to-blue-600",
+          "text-white font-semibold",
+          "shadow-lg shadow-cyan-500/25",
+          "before:absolute before:inset-0 before:bg-gradient-to-b before:from-white/30 before:via-white/15 before:to-transparent before:pointer-events-none",
+          "hover:from-cyan-400 hover:to-blue-500 hover:shadow-xl hover:shadow-cyan-500/30 hover:before:from-white/40",
+          "active:from-cyan-600 active:to-blue-700 active:shadow-md",
+          "transition-all duration-200",
+        ],
       },
       [BUTTON_VARIANTS.SECONDARY]: {
         root: ["bg-secondary text-secondary-foreground hover:bg-secondary/80"],
