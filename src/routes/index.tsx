@@ -45,8 +45,9 @@ function HomePage() {
 
   return (
     <div className="relative flex flex-col">
-      <div className="bg-background sticky top-0 z-10">
-        <div className="bg-sidebar border-sidebar-border flex w-full flex-row border-b">
+      <div className="sticky top-0 z-10">
+        <div className="bg-sidebar relative flex w-full flex-row">
+          <div className="bg-background border-sidebar-border absolute top-[100%] right-0 left-0 h-[35px] w-full border-t"></div>
           <Container className="flex items-center py-2">
             <div className="relative">
               <a href="#" className="block transition-opacity hover:opacity-90">
@@ -71,7 +72,7 @@ function HomePage() {
               <Input
                 placeholder="Search"
                 type="text"
-                className="h-12 w-full rounded-full pl-10"
+                className="relative z-10 h-12 w-full rounded-full pl-10"
                 style={{
                   backgroundColor: "#111118",
                 }}
@@ -79,13 +80,13 @@ function HomePage() {
               <Search className="absolute top-0 left-0 mt-[17px] ml-[15px] size-4" />
             </div>
           </Container>
-          <div className="from-background absolute right-0 bottom-[-35px] left-0 h-[35px] w-full bg-gradient-to-b to-transparent" />
+          {/* <div className="from-background absolute right-0 bottom-[-8px] left-0 h-[8px] w-full bg-gradient-to-b to-transparent" /> */}
         </div>
       </div>
       {/* <div className="relative flex max-h-[calc(100vh-150px)] w-full flex-1 flex-col overflow-scroll pt-4"> */}
       <div className="relative flex w-full flex-col pt-4">
         <Container>
-          <div>
+          <div className="hidden">
             <div className="hidden">
               <ArrowRight />
               <Star
@@ -98,7 +99,7 @@ function HomePage() {
             </div>
           </div>
           <div className="flex flex-col gap-2 pb-[200px]">
-            <div className="col my-10 flex w-full flex-row gap-3">
+            <div className="col my-10 flex hidden w-full flex-row gap-3">
               <Button variant="default">Default</Button>
               <Button variant="secondary">Secondary</Button>
               <Button variant="outline">Outline</Button>
@@ -109,17 +110,24 @@ function HomePage() {
                 key={i}
                 className="bg-card text-card-foreground flex flex-col gap-6 rounded-xl border p-4 py-6 shadow-sm"
               >
+                <img
+                  src={`https://picsum.photos/seed/${i}/800/600`}
+                  alt={`Random image ${i + 1}`}
+                  className="w-full rounded-lg object-cover"
+                />
+              </div>
+            ))}
+            {/* {Array.from({ length: 100 }, (_, i) => (
+              <div
+                key={i}
+                className="bg-card text-card-foreground flex flex-col gap-6 rounded-xl border p-4 py-6 shadow-sm"
+              >
                 <p>hello</p>
-                {/* <div className="col flex w-full flex-col gap-1">
-                  <Button variant="default">default</Button>
-                  <Button variant="secondary">secondary</Button>
-                  <Button variant="outline">outline</Button>
-                </div> */}
                 <div className="bg-muted text-muted-foreground rounded-xl border p-4">
                   <p>mute</p>
                 </div>
               </div>
-            ))}
+            ))} */}
           </div>
         </Container>
       </div>
