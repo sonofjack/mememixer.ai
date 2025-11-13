@@ -82,17 +82,23 @@ function HomePage() {
             </div>
           </div>
           <div className="flex flex-col gap-2">
+            <div className="col mt-20 flex w-full flex-col gap-1">
+              <Button variant="default">default</Button>
+              <Button variant="secondary">secondary</Button>
+              <Button variant="outline">outline</Button>
+            </div>
+
             {Array.from({ length: 100 }, (_, i) => (
               <div
                 key={i}
                 className="bg-card text-card-foreground flex flex-col gap-6 rounded-xl border p-4 py-6 shadow-sm"
               >
                 <p>hello</p>
-                <div className="col flex w-full flex-col gap-1">
+                {/* <div className="col flex w-full flex-col gap-1">
                   <Button variant="default">default</Button>
                   <Button variant="secondary">secondary</Button>
                   <Button variant="outline">outline</Button>
-                </div>
+                </div> */}
                 <div className="bg-muted text-muted-foreground rounded-xl border p-4">
                   <p>mute</p>
                 </div>
