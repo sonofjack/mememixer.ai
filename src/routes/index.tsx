@@ -45,29 +45,29 @@ function HomePage() {
 
   return (
     <div className="relative flex flex-col">
-      <div className="bg-sidebar border-sidebar-border flex w-full flex-row border-b">
-        <Container className="flex items-center py-2">
-          <div className="relative">
-            <a href="#" className="block transition-opacity hover:opacity-90">
-              <LogoMemeMixerGlow />
-            </a>
-          </div>
-          <div className="flex flex-1 items-center justify-end gap-1">
-            <Button variant="outline" size="icon">
-              <SettingsHorizontal className="absolute h-[1.2rem] w-[1.2rem] scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0" />
-              <span className="sr-only">Toggle theme</span>
-            </Button>
-            <Button variant="outline" size="icon">
-              <Person className="absolute h-[1.2rem] w-[1.2rem] scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0" />
-              <span className="sr-only">Toggle theme</span>
-            </Button>
-          </div>
-        </Container>
-      </div>
-      <div className="relative flex max-h-[calc(100vh-150px)] w-full flex-1 flex-col overflow-scroll pt-4">
-        <Container>
-          <div className="border- sticky top-0 w-full border-green-200">
+      <div className="bg-background sticky top-0 z-10">
+        <div className="bg-sidebar border-sidebar-border flex w-full flex-row border-b">
+          <Container className="flex items-center py-2">
             <div className="relative">
+              <a href="#" className="block transition-opacity hover:opacity-90">
+                <LogoMemeMixerGlow />
+              </a>
+            </div>
+            <div className="flex flex-1 items-center justify-end gap-1">
+              <Button variant="outline" size="icon">
+                <SettingsHorizontal className="absolute h-[1.2rem] w-[1.2rem] scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0" />
+                <span className="sr-only">Toggle theme</span>
+              </Button>
+              <Button variant="outline" size="icon">
+                <Person className="absolute h-[1.2rem] w-[1.2rem] scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0" />
+                <span className="sr-only">Toggle theme</span>
+              </Button>
+            </div>
+          </Container>
+        </div>
+        <div className="relative w-full">
+          <Container className="flex w-full items-center pt-2">
+            <div className="relative w-full">
               <Input
                 placeholder="Search"
                 type="text"
@@ -78,7 +78,13 @@ function HomePage() {
               />
               <Search className="absolute top-0 left-0 mt-[17px] ml-[15px] size-4" />
             </div>
-          </div>
+          </Container>
+          <div className="from-background absolute right-0 bottom-[-35px] left-0 h-[35px] w-full bg-gradient-to-b to-transparent" />
+        </div>
+      </div>
+      {/* <div className="relative flex max-h-[calc(100vh-150px)] w-full flex-1 flex-col overflow-scroll pt-4"> */}
+      <div className="relative flex w-full flex-col pt-4">
+        <Container>
           <div>
             <div className="hidden">
               <ArrowRight />
@@ -91,7 +97,7 @@ function HomePage() {
               <LinkOut />
             </div>
           </div>
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col gap-2 pb-[200px]">
             <div className="col my-10 flex w-full flex-row gap-3">
               <Button variant="default">Default</Button>
               <Button variant="secondary">Secondary</Button>
@@ -117,10 +123,19 @@ function HomePage() {
           </div>
         </Container>
       </div>
-      <div className="fixed right-0 bottom-0 left-0 flex h-[100px] w-full flex-row">
+      <div className="bg-background fixed right-0 bottom-0 left-0 flex h-[100px] w-full flex-row">
+        <div className="from-background absolute top-[-25px] right-0 left-0 h-[25px] w-full bg-gradient-to-t to-transparent" />
         <Container>
-          <div className="border- w-full border-green-200">
-            <Input placeholder="Ask MemeMixer" type="text" className="w-full" />
+          <div className="relative w-full">
+            <Input
+              placeholder="Mix a meme"
+              type="text"
+              className="h-12 w-full rounded-full pl-10"
+              style={{
+                backgroundColor: "#111118",
+              }}
+            />
+            <Search className="absolute top-0 left-0 mt-[17px] ml-[15px] size-4" />
           </div>
 
           <div className="fixed right-0 bottom-0">
