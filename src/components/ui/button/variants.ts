@@ -17,7 +17,8 @@ export const buttonVariants = tv({
       [BUTTON_VARIANTS.DEFAULT]: {
         root: [
           "relative overflow-hidden border-0",
-          "bg-gradient-to-b from-cyan-500 to-blue-600",
+          "bg-gradient-to-b from-[#00d0ff] to-[#5070ff]",
+          // "bg-gradient-to-b from-cyan-500 to-blue-600",
           "text-black font-semibold",
           "shadow-lg shadow-cyan-500/25",
           "before:absolute before:inset-0 before:bg-gradient-to-b before:from-white/30 before:via-white/15 before:to-transparent before:pointer-events-none",
