@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { LinkOut, Person, SettingsHorizontal, Star } from "akar-icons";
+import { LinkOut, Person, Search, SettingsHorizontal, Star } from "akar-icons";
 import { ArrowRight } from "lucide-react";
 // import { tv } from "tailwind-variants";
 import { Container } from "~/components/container";
@@ -64,10 +64,13 @@ function HomePage() {
           </div>
         </Container>
       </div>
-      <div className="relative flex max-h-[calc(100vh-150px)] w-full flex-1 flex-col overflow-scroll pt-2">
+      <div className="relative flex max-h-[calc(100vh-150px)] w-full flex-1 flex-col overflow-scroll pt-4">
         <Container>
           <div className="border- sticky top-0 w-full border-green-200">
-            <Input placeholder="Search" type="text" className="w-full" />
+            <div className="relative">
+              <Input placeholder="Search" type="text" className="w-full pl-10" />
+              <Search className="absolute top-0 left-0 mt-[10px] ml-[10px] size-4" />
+            </div>
           </div>
           <div>
             <div className="hidden">
