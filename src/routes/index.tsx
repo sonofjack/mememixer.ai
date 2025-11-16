@@ -67,23 +67,18 @@ function HomePage() {
           </Container>
         </div>
         <div className="relative w-full">
-          <Container className="flex w-full items-center pt-2">
+          <Container className="flex w-full items-center pt-4">
             <div className="relative w-full">
               <Input
                 placeholder="Search"
                 type="text"
                 className="relative z-10 h-12 w-full rounded-full pl-10"
-                style={{
-                  backgroundColor: "#111118",
-                }}
               />
               <Search className="absolute top-0 left-0 z-20 mt-[17px] ml-[15px] size-4" />
             </div>
           </Container>
-          {/* <div className="from-background absolute right-0 bottom-[-8px] left-0 h-[8px] w-full bg-gradient-to-b to-transparent" /> */}
         </div>
       </div>
-      {/* <div className="relative flex max-h-[calc(100vh-150px)] w-full flex-1 flex-col overflow-scroll pt-4"> */}
       <div className="relative flex w-full flex-col pt-4">
         <Container>
           <div className="hidden">
@@ -108,7 +103,7 @@ function HomePage() {
             {Array.from({ length: 100 }, (_, i) => (
               <div
                 key={i}
-                className="bg-card text-card-foreground flex flex-col gap-6 rounded-xl border p-4 py-6 shadow-sm"
+                className="bg-card text-card-foreground flex flex-col gap-6 rounded-xl border p-4 py-6"
               >
                 <img
                   src={`https://picsum.photos/seed/${i}/800/600`}
@@ -131,17 +126,14 @@ function HomePage() {
           </div>
         </Container>
       </div>
-      <div className="bg-background fixed right-0 bottom-0 left-0 flex h-[100px] w-full flex-row">
-        <div className="from-background absolute top-[-25px] right-0 left-0 h-[25px] w-full bg-gradient-to-t to-transparent" />
+      <div className="fixed right-0 bottom-0 left-0 flex h-[100px] w-full flex-row">
+        <div className="bg-background absolute top-[22px] right-0 left-0 h-[135px] w-full"></div>
         <Container>
           <div className="relative w-full">
             <Input
               placeholder="Mix a meme"
               type="text"
               className="h-12 w-full rounded-full pl-10"
-              style={{
-                backgroundColor: "#111118",
-              }}
             />
             <Search className="absolute top-0 left-0 mt-[17px] ml-[15px] size-4" />
           </div>
