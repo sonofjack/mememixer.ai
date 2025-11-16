@@ -1,0 +1,29 @@
+---
+globs: "**/*"
+description: Terminal command execution guidelines
+alwaysApply: true
+---
+
+# Terminal Configuration
+
+## AI Command Terminal Settings
+
+When the AI suggests running terminal commands:
+
+- **Always run commands in the editor terminal** (bottom panel), not the sidebar
+- Use the main integrated terminal for all command execution
+- Ensure commands are executed in the project root directory
+- Use the current working directory context for relative paths
+
+## Command Execution Guidelines
+
+- Commands should be executed in the main terminal panel
+- Avoid sidebar terminal for AI-suggested commands
+- Maintain terminal session continuity across commands
+- Use proper working directory for project-specific commands
+
+## Terminal Integration
+
+- Prefer the integrated terminal over external terminal applications
+- Maintain command history and session state
+- Use the terminal that's already open in the editor workspace

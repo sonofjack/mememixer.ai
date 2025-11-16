@@ -1,0 +1,74 @@
+---
+globs: *.tsx,*.ts,*.css
+description: Styling and design system guidelines
+---
+
+# Styling & Design System
+
+## Tamagui Theme System
+
+- Use Tamagui's built-in theme tokens: `$color`, `$space`, `$size`, etc.
+- Access theme values via props: `backgroundColor="$background"`
+- Use responsive props: `padding={{ xs: '$2', md: '$4' }}`
+- Leverage Tamagui's variant system for component states
+
+## Component Styling
+
+```tsx
+// Preferred Tamagui styling approach
+<YStack
+  backgroundColor="$background"
+  padding="$4"
+  borderRadius="$4"
+  gap="$2"
+  shadowColor="$shadowColor"
+  shadowRadius={4}
+>
+  <Text color="$color" fontSize="$6">
+    Content
+  </Text>
+</YStack>
+```
+
+## Layout Components
+
+- Use `YStack` for vertical layouts
+- Use `XStack` for horizontal layouts
+- Use `ZStack` for overlapping elements
+- Prefer Tamagui layout props over custom CSS
+
+## Responsive Design
+
+- Mobile-first approach
+- Use Tamagui's responsive props
+- Test on multiple screen sizes
+- Consider both web and native platforms
+
+## Animation
+
+- Use Moti for animations: `import { MotiView } from 'moti'`
+- Prefer Tamagui's built-in animations when available
+- Keep animations performant and accessible
+- Use spring animations for natural feel
+
+## Dark/Light Mode
+
+- Use Tamagui's theme system for automatic mode switching
+- Import theme utilities from `~/interface/theme/`
+- Test components in both themes
+- Use semantic color tokens, not hardcoded colors
+
+## Accessibility
+
+- Follow Biome's a11y rules (already configured)
+- Use semantic HTML elements
+- Provide alt text for images
+- Ensure proper color contrast
+- Support keyboard navigation
+
+## CSS Guidelines (when needed)
+
+- Minimize custom CSS usage
+- Use CSS modules or styled-components if custom CSS needed
+- Follow Biome formatting rules (2 spaces, single quotes)
+- Prefer Tamagui solutions over custom CSS

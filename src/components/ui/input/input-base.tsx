@@ -1,13 +1,12 @@
-import { cn } from "~/lib/utils";
 import type { InputProps } from "./types";
-import { inputClasses } from "./variants";
+import { variants } from "./variants";
 
-export function Input({ className, type, ...props }: InputProps) {
+export function Input({ className, type, size, variant, ...props }: InputProps) {
   return (
     <input
       type={type}
       data-slot="input"
-      className={cn(...inputClasses, className)}
+      className={variants({ size, variant, class: className })}
       {...props}
     />
   );

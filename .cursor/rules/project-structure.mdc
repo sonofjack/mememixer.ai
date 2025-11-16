@@ -1,0 +1,48 @@
+---
+alwaysApply: true
+description: Project structure and architecture guidelines
+---
+
+# MemeMixer.ai Project Structure
+
+## Architecture Overview
+
+This is a cross-platform React Native + Web app using the One/Vxrn framework with TypeScript.
+
+### Key Directories
+
+- `app/` - One framework routes and pages (file-based routing)
+- `src/` - Core application logic and components
+- `src/interface/` - UI components and design system
+- `src/better-auth/` - Authentication using Better Auth
+- `src/zero/` - Real-time data layer using Zero
+- `src/cloudinary/` - Media upload and management
+- `src/postgres/` - Database schema and seeding
+
+### Tech Stack
+
+- **Framework**: One/Vxrn (React Native + Web)
+- **UI Library**: Tamagui for cross-platform components
+- **State Management**: Zero for real-time data
+- **Authentication**: Better Auth
+- **Database**: PostgreSQL
+- **Media**: Cloudinary
+- **Styling**: Tamagui + CSS
+- **Testing**: Vitest + Testing Library
+- **Linting**: Biome (not ESLint/Prettier)
+- **Package Manager**: Yarn (never use npm)
+
+### Import Conventions
+
+- Use `~/` alias for `./src/` imports
+- Prefer absolute imports over relative when possible
+- Import Tamagui components from `tamagui` package
+- Use `@tamagui/` packages for specific functionality
+
+### File Naming
+
+- Components: PascalCase (e.g., `MemeCard.tsx`)
+- Utilities: camelCase (e.g., `randomId.ts`)
+- Pages/Routes: kebab-case (e.g., `login-github.tsx`)
+- Test files: `*.spec.tsx` or `*.test.tsx`
+- Story files: `*.stories.tsx`

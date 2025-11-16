@@ -1,0 +1,73 @@
+---
+globs: app/api/**/*.ts
+description: API route development guidelines
+---
+
+# API Routes Guidelines
+
+## File Structure
+
+- API routes go in `app/api/` directory
+- Use `+api.ts` suffix for route files
+- Follow One framework's file-based routing conventions
+- Use TypeScript for all API routes
+
+## Route Handler Pattern
+
+```typescript
+import type { OneRouter } from "one";
+
+export async function GET(request: Request, { params }: OneRouter) {
+  try {
+    // Handle GET request
+    return Response.json({ success: true });
+  } catch (error) {
+    return Response.json({ error: "Internal server error" }, { status: 500 });
+  }
+}
+
+export async function POST(request: Request, { params }: OneRouter) {
+  try {
+    const body = await request.json();
+    // Handle POST request
+    return Response.json({ success: true });
+  } catch (error) {
+    return Response.json({ error: "Bad request" }, { status: 400 });
+  }
+}
+```
+
+## Authentication
+
+- Use Better Auth for authentication checks
+- Import auth helpers from `~/better-auth/authClient`
+- Always validate user sessions for protected routes
+- Return appropriate HTTP status codes
+
+## Database Operations
+
+- Use Zero for database operations when possible
+- Import database utilities from `~/zero/`
+- Handle database errors gracefully
+- Use transactions for multi-step operations
+
+## Error Handling
+
+- Always wrap route handlers in try-catch
+- Return consistent error response format
+- Log errors appropriately (avoid console.log in production)
+- Use appropriate HTTP status codes
+
+## Validation
+
+- Validate request bodies and parameters
+- Use TypeScript interfaces for request/response types
+- Sanitize user inputs
+- Validate file uploads before processing
+
+## Cloudinary Integration
+
+- Use Cloudinary config from `~/cloudinary/config`
+- Handle file uploads securely
+- Validate file types and sizes
+- Return proper URLs for uploaded media

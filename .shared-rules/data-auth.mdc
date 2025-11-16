@@ -1,0 +1,85 @@
+---
+globs: src/zero/**/*.ts,src/better-auth/**/*.ts,app/api/**/*.ts
+description: Data layer and authentication patterns
+---
+
+# Data Layer & Authentication
+
+## Zero Real-time Data
+
+- Use Zero for all client-server data synchronization
+- Import Zero client from `~/zero/zero`
+- Define schemas in `~/zero/schema.ts`
+- Use Zero queries for reactive data
+
+### Zero Query Patterns
+
+```typescript
+import { useQuery } from "~/zero/zero";
+
+// Reactive query
+const memes = useQuery((q) => q.meme.where("userId", userId));
+
+// Mutations
+const createMeme = useMutation((tx) =>
+  tx.meme.insert({ title, imageUrl, userId })
+);
+```
+
+## Better Auth Integration
+
+- Authentication config in `~/better-auth/auth.ts`
+- Client-side auth from `~/better-auth/authClient`
+- Use auth effects from `~/better-auth/AuthEffects.tsx`
+
+### Authentication Patterns
+
+```typescript
+import { useSession } from '~/better-auth/authClient'
+
+function ProtectedComponent() {
+  const { data: session, isPending } = useSession()
+
+  if (isPending) return <Loading />
+  if (!session) return <LoginPrompt />
+
+  return <AuthenticatedContent user={session.user} />
+}
+```
+
+## Database Schema
+
+- Define tables in `~/zero/schema.ts`
+- Use TypeScript for type safety
+- Follow Zero's schema conventions
+- Run migrations for schema changes
+
+## API Route Data Access
+
+- Use Zero server-side queries in API routes
+- Validate user permissions before data access
+- Handle real-time updates properly
+- Use transactions for consistency
+
+## Security Patterns
+
+- Always validate user sessions
+- Implement proper authorization checks
+- Sanitize user inputs
+- Use environment variables for secrets
+- Follow principle of least privilege
+
+## Error Handling
+
+- Handle network errors gracefully
+- Provide fallback states for failed queries
+- Show appropriate error messages to users
+- Log errors for debugging (not console.log)
+
+## Performance Optimization
+
+- Use Zero's built-in caching
+- Implement proper loading states
+- Optimize query patterns
+- Use pagination for large datasets
+- Consider real-time update frequency

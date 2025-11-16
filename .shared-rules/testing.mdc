@@ -1,0 +1,80 @@
+---
+globs: *.spec.tsx,*.test.tsx,*.spec.ts,*.test.ts
+description: Testing guidelines and best practices
+---
+
+# Testing Guidelines
+
+## Testing Stack
+
+- **Test Runner**: Vitest
+- **React Testing**: @testing-library/react + @testing-library/react-native
+- **Assertions**: Vitest built-in assertions
+- **Coverage**: Vitest coverage (c8)
+- **Storybook**: Component documentation and testing
+
+## Test File Structure
+
+- Place tests next to source files: `Component.tsx` → `Component.spec.tsx`
+- Use `.spec.tsx` for component tests
+- Use `.test.ts` for utility function tests
+- Import test utilities from `~/test/test-utils`
+
+## Component Testing Pattern
+
+```tsx
+import { render, screen, fireEvent } from "~/test/test-utils";
+import Component from "./Component";
+
+describe("Component", () => {
+  it("renders correctly", () => {
+    render(<Component title="Test" />);
+    expect(screen.getByText("Test")).toBeInTheDocument();
+  });
+
+  it("handles user interaction", async () => {
+    const onPress = vi.fn();
+    render(<Component title="Test" onPress={onPress} />);
+
+    await fireEvent.press(screen.getByRole("button"));
+    expect(onPress).toHaveBeenCalled();
+  });
+});
+```
+
+## Testing Best Practices
+
+- Test behavior, not implementation details
+- Use semantic queries (getByRole, getByLabelText)
+- Mock external dependencies appropriately
+- Test cross-platform components on both web and native
+- Write tests that would catch real bugs
+
+## API Route Testing
+
+- Test all HTTP methods
+- Test authentication scenarios
+- Mock database calls
+- Test error handling
+- Validate response formats
+
+## Storybook Integration
+
+- Create stories for all reusable components
+- Use Storybook for visual testing
+- Document component props and variants
+- Test different states and edge cases
+
+## Coverage Goals
+
+- Aim for >80% coverage on critical paths
+- Focus on business logic and user interactions
+- Don't test third-party library internals
+- Use coverage reports to find untested edge cases
+
+## Mocking Guidelines
+
+- Mock Zero queries using Vitest mocks
+- Mock Cloudinary uploads in tests
+- Mock authentication state
+- Use MSW for API mocking when needed

@@ -1,0 +1,60 @@
+---
+globs: *.tsx,*.ts
+description: React component development guidelines
+---
+
+# React Component Guidelines
+
+## Component Structure
+
+- Use functional components with TypeScript
+- Export components as default exports
+- Define prop types using TypeScript interfaces
+- Use React 19 features (no legacy patterns)
+
+## Tamagui Integration
+
+- Prefer Tamagui components over native HTML elements
+- Use Tamagui's theme system for consistent styling
+- Import from `tamagui` package: `import { YStack, XStack, Text } from 'tamagui'`
+- Use Tamagui's responsive props and variants
+
+## Component Patterns
+
+```tsx
+// Preferred component structure
+interface ComponentProps {
+  title: string;
+  onPress?: () => void;
+}
+
+export default function Component({ title, onPress }: ComponentProps) {
+  return (
+    <YStack padding="$4" gap="$2">
+      <Text fontSize="$6">{title}</Text>
+      {onPress && <Button onPress={onPress}>Action</Button>}
+    </YStack>
+  );
+}
+```
+
+## Cross-Platform Considerations
+
+- Use Tamagui components for cross-platform compatibility
+- Avoid platform-specific APIs unless wrapped in platform checks
+- Test components in both web and native environments
+- Use One's `useIsomorphicLayoutEffect` for SSR compatibility
+
+## State Management
+
+- Use React hooks for local state
+- Use Zero queries for server state and real-time data
+- Avoid prop drilling - use context for deeply nested props
+- Prefer composition over complex state management
+
+## Performance
+
+- Use React.memo() for expensive components
+- Implement proper key props for lists
+- Avoid inline object/function creation in render
+- Use Tamagui's optimized components for better performance

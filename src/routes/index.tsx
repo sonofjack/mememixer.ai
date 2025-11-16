@@ -77,7 +77,7 @@ function HomePage() {
                   backgroundColor: "#111118",
                 }}
               />
-              <Search className="absolute top-0 left-0 mt-[17px] ml-[15px] size-4" />
+              <Search className="absolute top-0 left-0 z-20 mt-[17px] ml-[15px] size-4" />
             </div>
           </Container>
           {/* <div className="from-background absolute right-0 bottom-[-8px] left-0 h-[8px] w-full bg-gradient-to-b to-transparent" /> */}

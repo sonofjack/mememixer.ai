@@ -1,0 +1,97 @@
+---
+alwaysApply: true
+description: Code quality standards and linting rules
+---
+
+# Code Quality Standards
+
+## Biome Configuration
+
+- This project uses Biome for linting and formatting (NOT ESLint/Prettier)
+- Configuration in [biome.json](mdc:biome.json)
+- Run `yarn lint` to check for issues
+- Run `yarn lint:fix` to auto-fix issues
+- Run `yarn format:fix` to format code
+
+## TypeScript Standards
+
+- Use strict TypeScript configuration
+- Define proper interfaces for all props and data
+- Avoid `any` type unless absolutely necessary
+- Use type assertions sparingly
+- Leverage TypeScript's inference when possible
+
+## Import Organization
+
+- Use Biome's import sorting (enabled in config)
+- Prefer absolute imports with `~/` alias
+- Group imports: external packages, internal modules, relative imports
+- Remove unused imports (Biome will catch these)
+
+## Code Style (Biome Enforced)
+
+- 2 space indentation
+- Single quotes for strings
+- Trailing commas in ES5 contexts
+- Semicolons as needed (ASI-safe)
+- JSX double quotes
+- Line width: 100 characters
+
+## File & Function Standards
+
+- **File Length**: Maximum 400 lines per file
+- **Function Length**: Keep functions short (ideally <20 lines)
+- **No Deep Nesting**: Maximum 3 levels of indentation
+- **Flat Structure**: Prefer early returns over nested if/else
+- **No Comments**: Code should be self-documenting through naming
+
+## Naming Conventions
+
+- Components: PascalCase (`MemeCard`)
+- Functions/variables: camelCase (`createMeme`)
+- Constants: UPPER_SNAKE_CASE (`API_BASE_URL`)
+- Files: kebab-case for pages, PascalCase for components
+- Interfaces: PascalCase with descriptive names
+- **Descriptive Naming**: Names should clearly express intent
+- **No Abbreviations**: Use full words (`userId` not `uid`)
+- **Avoid Magic Numbers**: Use named constants instead of literals
+
+## Error Handling
+
+- Use proper Error objects, not strings
+- Handle async errors with try-catch
+- Provide meaningful error messages
+- Log errors appropriately (avoid console.log)
+- Use type-safe error handling patterns
+
+## Performance Guidelines
+
+- Avoid unnecessary re-renders
+- Use React.memo() for expensive components
+- Implement proper dependency arrays in hooks
+- Optimize bundle size with tree shaking
+- Use Tamagui's optimized components
+
+## Security Practices
+
+- Validate all user inputs
+- Sanitize data before database operations
+- Use environment variables for secrets
+- Implement proper authentication checks
+- Follow OWASP security guidelines
+
+## Code Structure Principles
+
+- **Avoid `else` statements**: Use early returns and guard clauses
+- **Immutable Variables**: Prefer `const` over `let`, use immutable patterns
+- **No Global State**: Use proper state management (React state, Zero, context)
+- **Avoid Deep Loops**: Extract complex iterations into separate functions
+- **Flat Control Flow**: Minimize nesting with early returns
+
+## Documentation
+
+- **No Comments**: Code should be self-documenting through clear naming
+- Use JSDoc only for public APIs when absolutely necessary
+- Create Storybook stories for components
+- Keep README files updated
+- Document breaking changes in commit messages
