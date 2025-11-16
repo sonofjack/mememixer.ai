@@ -15,10 +15,16 @@ export const LogoMemeMixerGlow: FC = () => (
         0 0 23.3px rgba(105, 129, 250, 0.4),
         0 0 30px rgba(105, 129, 250, 0.3);
     }
+    .logo-mememixer-dot-fill {
+      fill: #575791;
+    }
+    .dark.logo-mememixer-dot-fill {
+      fill: #6aaebf;
+    }
     `}</style>
     <div className="relative">
       <LogoMemeMixerBase
-        dotFill="#6aaebf"
+        dotFillClassName="logo-mememixer-dot-fill"
         className="relative h-auto max-w-28 text-[#575791] dark:text-[#cfcfd4]"
       />
       <div className="logo-mememixer-glow__intense-glow pointer-events-none absolute top-[5px] left-[5px] size-[25px] rounded-full" />
