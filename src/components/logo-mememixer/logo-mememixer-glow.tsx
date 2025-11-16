@@ -4,7 +4,7 @@ import { LogoMemeMixerBase } from "./logo-mememixer-base";
 export const LogoMemeMixerGlow: FC = () => (
   <>
     <style>{`
-    .logo-mememixer-glow__intense-glow {
+    .dark.logo-mememixer-glow__intense-glow {
       box-shadow:
         0 0 2.7px rgba(32, 217, 245, 1),
         0 0 5px rgba(32, 217, 245, 0.9),
@@ -19,7 +19,7 @@ export const LogoMemeMixerGlow: FC = () => (
     <div className="relative">
       <LogoMemeMixerBase
         dotFill="#6aaebf"
-        className="relative h-auto max-w-28 text-[#cfcfd4]"
+        className="relative h-auto max-w-28 text-[#575791] dark:text-[#cfcfd4]"
       />
       <div className="logo-mememixer-glow__intense-glow pointer-events-none absolute top-[5px] left-[5px] size-[25px] rounded-full" />
     </div>
